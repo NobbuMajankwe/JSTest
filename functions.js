@@ -48,6 +48,7 @@ const Functions = () => {
 
        const addElement = ( newEntry) => {
             elements.push(newEntry);
+            
            // let myarray = []
            // myarray = sortCount(elements);
            // return myarray;
