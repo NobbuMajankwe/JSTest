@@ -40,7 +40,7 @@ const Functions = () => {
 
        const sortCount = (ary) => {
             let sortedCount = ary.sort((a, b) => b.count-a.count);
-            sortedCount.forEach(element, i => {
+            sortedCount.forEach( element, i => {
                 element.order = i;
             });
             return sortedCount;
@@ -48,7 +48,7 @@ const Functions = () => {
 
        const addElement = ( newEntry) => {
             elements.push(newEntry);
-            
+
            // let myarray = []
            // myarray = sortCount(elements);
            // return myarray;

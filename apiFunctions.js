@@ -1,7 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
 
-const ApiFunctions = () => {
 
     function getResponse() {
         return new Promise((resolve, reject) => {
@@ -12,7 +10,7 @@ const ApiFunctions = () => {
         });
        }
 
-    const outputResponse = () => {
+    export const outputResponse = () => {
         let promise = getResponse();
         promise.then(
             (result) => { 
@@ -21,7 +19,7 @@ const ApiFunctions = () => {
           );
     }
 
-    const WrapperResponse = () => {
+    export const WrapperResponse = () => {
         let promise = getResponse();
         promise.then(
             (result) => { 
@@ -35,13 +33,4 @@ const ApiFunctions = () => {
           );
     }
 
-    return (
-        <View>
-            
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({})
-
-export default ApiFunctions;
+   
