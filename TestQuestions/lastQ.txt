@@ -1,0 +1,2 @@
+3.1 Firstly because it has a syntex error - missing an open curly brace, then secondly to update a state  you call the setState method and pass an object containing the updated object / count
+3.3 Redux, it is very straightforward and widely understood in the case of team programming(perfomanance, reusability and community support), 

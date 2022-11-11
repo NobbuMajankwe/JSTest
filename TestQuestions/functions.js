@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
-const Functions = () => {
 
     const elements = [
         {
@@ -30,7 +29,7 @@ const Functions = () => {
         },
        ];
 
-       const sumCount = (ary) => {
+      export const sumCount = (ary) => {
             let sum = 0;
             ary.forEach(element => {
                 sum += element.count;
@@ -38,7 +37,7 @@ const Functions = () => {
             return sum;
        }
 
-       const sortCount = (ary) => {
+      export const sortCount = (ary) => {
             let sortedCount = ary.sort((a, b) => b.count-a.count);
             sortedCount.forEach( element, i => {
                 element.order = i;
@@ -46,7 +45,7 @@ const Functions = () => {
             return sortedCount;
        }
 
-       const addElement = ( newEntry) => {
+       export const addElement = ( newEntry) => {
             elements.push(newEntry);
 
            // let myarray = []
@@ -58,15 +57,10 @@ const Functions = () => {
        let myarray = [] ;
        myarray = sortCount(elements)
 
-    return (
-        <View>
-            <Text>1.1: {sumCount(elements)}</Text>
-            <Text>1.2: {sortCount(elements)}</Text>
-            <Text>1.3: {addElement({name: Shereen, count: 16})}</Text>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({})
-
-export default Functions;
+    export const Chain = (newEntry) =>{
+      addElement(newEntry).then(()=>{
+      sumCount(elements);
+        let myarray = [] ;
+        myarray = sortCount(elements)
+      })
+    }
